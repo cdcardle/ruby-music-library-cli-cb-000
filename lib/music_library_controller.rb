@@ -29,7 +29,9 @@ class MusicLibraryController
     elsif input == 'play song'
       play_song
     elsif input == "exit"
-      return
+      exit
+    else
+      "Invalid Entry. Try again."
     end
   end
 
