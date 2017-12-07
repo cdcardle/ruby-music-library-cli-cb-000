@@ -63,9 +63,9 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    song = Song.new_from_filename(filename)
-    song.save
-    song
-    # new_from_filename(filename).tap {|song| song.save}
+    # song = Song.new_from_filename(filename)
+    # song.save
+    # song
+    new_from_filename(filename).tap {|song| song.save}
   end
 end
