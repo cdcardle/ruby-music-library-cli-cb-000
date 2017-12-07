@@ -26,10 +26,7 @@ class Song
     # song.name = name
     # song.save
     # song
-    new.tap do |song|
-      song.name = name
-      song.save
-    end
+    new.tap {|song| song.name = name; song.save}
   end
 
   def artist=(artist)
