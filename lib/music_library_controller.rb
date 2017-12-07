@@ -63,7 +63,7 @@ class MusicLibraryController
     num = gets.strip.to_i
     songs = Song.all.sort_by {|song| song.name}
     if num >= 1 && num <= Song.all.size
-      puts "Playing #{songs[num + 1].name} by #{songs.[num + 1].artist.name}"
+      puts "Playing #{songs[num + 1].name} by #{songs[num + 1].artist.name}"
     end
   end
 end
