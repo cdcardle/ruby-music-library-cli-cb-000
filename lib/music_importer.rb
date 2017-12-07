@@ -7,6 +7,8 @@ class MusicImporter
   end
 
   def import
-
+    @files.each do |filename|
+      Song.create_from_filename(filename)
+    end
   end
 end
