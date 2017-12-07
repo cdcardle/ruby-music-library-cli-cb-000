@@ -15,6 +15,14 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    input = gets.strip until input == "exit"
+    input = gets.strip.downcase until input == "exit"
+  end
+
+  def list_songs
+    i = 1
+    Song.all.sort_by {|song| song.name}.each do |song|
+      puts "#{i}. #{song.artist} - #{song.name} - #{song.genre}"
+      i += 1
+    end
   end
 end
