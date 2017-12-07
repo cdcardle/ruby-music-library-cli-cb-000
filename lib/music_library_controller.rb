@@ -40,7 +40,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist = gets.strip
     if Song.find_by_name(artist)
-      self.each_with_index do |song, i|
+      Song.find_by_name(artist).each_with_index do |song, i|
         puts "#{i + 1}. #{song.name} - #{song.genre.name}"
       end
     end
