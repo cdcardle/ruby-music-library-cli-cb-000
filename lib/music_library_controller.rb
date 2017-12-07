@@ -1,7 +1,7 @@
 class MusicLibraryController
   attr_accessor
 
-  def initialize(path)
+  def initialize(path='./db/mp3s')
     MusicImporter(path)
   end
 end
