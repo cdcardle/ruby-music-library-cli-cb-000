@@ -61,4 +61,9 @@ class MusicLibraryController
       end
     end
   end
+
+  def play_song
+    list_songs
+    "Which song number would you like to play?"
+  end
 end
