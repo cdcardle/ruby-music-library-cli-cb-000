@@ -58,7 +58,7 @@ class Song
     new(info[1], artist, genre) unless find_by_name(info[1])
   end
 
-  def self.create_by_filename(filename)
+  def self.create_from_filename(filename)
     new_from_filename(filename).tap {|song| song.save}
   end
 end
