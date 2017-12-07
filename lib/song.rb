@@ -35,7 +35,7 @@ class Song
   def artist=(artist)
     if artist.class == Artist
       @artist = artist
-      self.artist.add_song(self)
+      artist.add_song(self)
     end
   end
 
